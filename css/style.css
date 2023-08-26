@@ -351,17 +351,21 @@ main .sobre{
 .my_services {
     padding: 60px;
     color: white;
+    
 }
 
 .my_services ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+   align-items: center;
+   justify-content: center;
+   
 }
 
-.my_services ul li {
+
+ 
+ .my_services ul li {
     cursor: pointer;
     border-radius: 6px;
     position: relative;
@@ -687,9 +691,10 @@ main .sobre{
     display: grid;
     justify-content: center;
     gap: 30px;
-   background-color: #f2f4f3;;
+    background-color: #f2f4f3;;
     max-weight: 100%;
     height: 100%;
+
 }
 .meus_contatos ul{
     display: flex;
@@ -706,10 +711,11 @@ main .sobre{
     transition: all 0.3s;
     display: block;
 }
-  .icon-large:hover {
-    font-size: 45px; 
+  
+.icon-large:hover {
+    transform: scale(1.1); 
     color: #7f00ff;
-  }
+}
   
 @keyframes animationImageButtom{
     0%{
@@ -850,3 +856,90 @@ main .sobre{
         justify-self: center;
     }
 }
+
+
+@media(max-width: 360px) {
+    .section-div div{
+        margin-top: 30px;
+        align-self: start;
+        text-align: center;
+        display: grid;
+        gap: 30px;
+  }
+    
+    .section-div div h1{
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #000;
+    }
+    
+    .section-div div h2{
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #ad86d9;
+        text-align: center;
+        margin-top: -20px;
+        height: 1.5rem; 
+    }
+
+    .section-div h2 {
+        margin-bottom: 10px; 
+      }
+      
+      .section-div a {
+        display: block;
+        margin-top: -10px; 
+      }
+      
+      .sobre_texto h1{
+        font-size:2.0rem;
+        color:#707070;
+       
+    }
+
+      .my_services {
+        padding: 0px;
+        color: white;
+    }
+    .my_services ul {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 25px; 
+    }
+
+    .my_services ul li {
+        max-width: 100%;
+        height: auto; 
+        padding: 20px; 
+        text-align: center;
+    }
+
+    .my_services ul li i {
+        font-size: 25px; 
+        margin-bottom: -10px; 
+    }
+    .my_services ul li h3 {
+        font-size: 20px; 
+        margin-top: 8px; 
+    }
+
+    .my_services ul li p {
+        font-size: 16px;
+        margin-top: -10px;
+    }
+
+    .sobre_info p {
+        font-size: 14px; 
+        line-height: .7; 
+      }
+      
+      .sobre_info i {
+        font-size: 14px; 
+        margin-right: 2px; 
+      }
+    
+}
+
+    
