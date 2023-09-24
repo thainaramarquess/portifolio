@@ -105,6 +105,7 @@ header .navegacao-primaria li a:hover{
 .section-div{
     animation: initialize .7s forwards;
     background-color: #fff;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -345,6 +346,7 @@ main .sobre{
     margin-top: -30px;
     padding: 60px;
    background-color: #fff;
+   width: 100%;
 }
 
 
@@ -619,8 +621,8 @@ main .sobre{
     justify-content: center;
     gap: 30px;
     background-color: #fff;
-    max-weight: 100%;
-    height: 100%;
+    max-width: 100%;
+    
 }
 
 .projects ul {
@@ -692,7 +694,7 @@ main .sobre{
     justify-content: center;
     gap: 30px;
     background-color: #f2f4f3;;
-    max-weight: 100%;
+    max-width: 100%;
     height: 100%;
 
 }
@@ -857,6 +859,132 @@ main .sobre{
     }
 }
 
+@media( max-width:800px){
+    .my_services {
+        padding: 0px;
+        color: white;
+    }
+    .my_services ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 25px; 
+        padding: 0;
+    }
+
+    .my_services ul li {
+        width: 100%;
+        height: 225px;
+        padding: 20px;
+        text-align: center;
+      }
+    
+
+    .my_services ul li i {
+        font-size: 20px; 
+        margin-bottom: -10px; 
+    }
+    .my_services ul li h3 {
+        font-size: 18px; 
+        margin-top: 8px; 
+    }
+
+    .my_services ul li p {
+        font-size: 16px;
+        margin-top: -8px;
+    }
+}
+
+ @media(max-width: 600px){
+    .sobre_titulo h1{
+        
+        font-size: 36px;
+    }
+    .sobre_titulo p{
+     
+       font-size: 24px;
+    }
+    .sobre_texto p{
+        font-size: 18px;
+    }
+    .my_services {
+        padding: 0px;
+        color: white;
+    }
+    .my_services ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 25px; 
+        padding: 0;
+    }
+
+    .my_services ul li {
+        width: 100%;
+        height: 225px;
+        padding: 20px;
+        text-align: center;
+      }
+    
+
+    .my_services ul li i {
+        font-size: 20px; 
+        margin-bottom: -10px; 
+    }
+    .my_services ul li h3 {
+        font-size: 18px; 
+        margin-top: 8px; 
+    }
+
+    .my_services ul li p {
+        font-size: 16px;
+        margin-top: -8px;
+    }
+
+    .experience_content div{
+        text-align: center;
+    }
+ }
+
+ @media(max-width: 414px){
+    .sobre_texto p{
+        font-size: 18px;
+    }
+    .my_services {
+        padding: 0px;
+        color: white;
+    }
+    .my_services ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        padding: 0;
+    }
+
+    .my_services ul li {
+        width: 100%;
+        height: 180px;
+        padding: 12px;
+        text-align: center;
+      }
+    
+
+    .my_services ul li i {
+        font-size: 16px; 
+        margin-bottom: -8px; 
+    }
+    .my_services ul li h3 {
+        font-size: 12px; 
+        margin-top: 4px; 
+    }
+
+    .my_services ul li p {
+        font-size: 10px;
+        margin-top: -4px;
+    }
+    
+    .experience_content div{
+        text-align: center;
+    }
+ }
 
 @media(max-width: 360px) {
     .section-div div{
@@ -898,6 +1026,9 @@ main .sobre{
         color:#707070;
        
     }
+    .sobre_texto p{
+        font-size: 18px;
+    }
 
       .my_services {
         padding: 0px;
@@ -931,15 +1062,78 @@ main .sobre{
     }
 
     .sobre_info p {
-        font-size: 14px; 
+        font-size: 11px; 
         line-height: .7; 
       }
       
       .sobre_info i {
-        font-size: 14px; 
+        font-size: 10px; 
         margin-right: 2px; 
       }
+
+      .experience_content div {
+        text-align: center;
+    }
+
+    .soft_skill h2{
+        padding: 10px 30px;
+        border-radius: 1px;
+    }
+   
+    .skill_content h3 {
+        font-size: 16px; /* Tamanho desejado em pixels */
+    }
+    
+    .skill_content ul li {
+        font-size: 16px; /* Tamanho desejado em pixels */
+    }
+
+    .soft_content h3 {
+        font-size: 18px; /* Tamanho desejado em pixels */
+    }
+    
+    .soft_content ul li {
+        font-size: 16px; 
+    } 
     
 }
 
+    /* Adicione uma media query para telas menores (por exemplo, dispositivos com largura máxima de 600px) */
+    @media (max-width: 600px) {
+        .projects ul {
+            grid-template-columns: 1fr;
+            align-items: center; /* Centraliza os projetos na horizontal */
+        }
     
+        .project {
+            width: 100%; /* Define a largura total da tela para cada projeto */
+        }
+    }
+    
+
+
+/* Resumo Genérico, Cursos e Funfacts (Estilos para dispositivos móveis) */
+@media (max-width: 600px) {
+    .my_resume,
+    .cursos,
+    .funfacts {
+        flex-direction: column; /* Empilhar itens verticalmente */
+    }
+
+    /* Aumentar o espaçamento entre os itens empilhados */
+    .my_resume p,
+    .cursos p,
+    .funfacts p {
+        margin-top: 20px;
+    }
+
+    /* Alinhar o texto centralizado */
+    .my_resume h1,
+    .cursos h1,
+    .funfacts h1,
+    .my_resume p,
+    .cursos p,
+    .funfacts p {
+        text-align: center;
+    }
+}
