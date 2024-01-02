@@ -614,79 +614,66 @@ main .sobre{
 }
 
 /* Projetos */
-
-.projects{
+.projects {
     padding: 30px;
     display: grid;
     justify-content: center;
     gap: 30px;
     background-color: #fff;
     max-width: 100%;
+}
+
+.project-models {
+        display: grid;
+        gap: 20px;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr); /* Três colunas por linha */
+    }
     
-}
+    /* Restante do seu código CSS... */
+    
 
-.projects ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.project_models ul li{
+.project-box {
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     background-color: #f2f4f3;
-    border: 1px solid #222;
-    padding:6px 20px;
+    padding: 20px;
     color: #707070;
-    
+    text-align: justify; /* Alinha o texto justificado */
+    border-radius: 8px;
+    max-width: 300px; /* Define uma largura máxima */
+    max-height: 500px; /* Define uma altura máxima */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
+.project-box img {
+    max-width: 100%;/* Mantém a proporção original da imagem */
+    height: 200px; /* Defina a altura desejada para as imagens */
+    object-fit: cover; /* Mantém a proporção e corta a imagem para caber na altura definida */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
 
-.project_models ul li.ativo {
+.project-link {
+    margin-top: auto; /* Ajusta a margem superior para "auto" */
+    text-decoration: none;
     background-color: #ad86d9;
     color: #151515;
+    padding: 8px;
+    border-radius: 4px;
     font-weight: bold;
+    text-align: center; 
+    transition: background-color 0.3s ease-in-out;
 }
 
-.projects_armazenamento ul {
-    display: grid;
-    margin-top: 60px;
-    gap: 20px;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.projects_armazenamento ul li{
-
-    float: left;
-    max-width: 100%;
-    height: 100%;
-}
-.projects_armazenamento ul li.ativo {
-    display:inline-block;
-    animation: animationImageButtom 2s ease-in-out forwards;
+.project-link:hover {
+    background-color: #824fae;
 }
 
 
-.projects_armazenamento ul li img{
-   max-width: 100%;
-   height: 100%;
-   border-radius: 4px;
-   cursor: pointer;
-}
-.projects_armazenamento ul li a {
-    display: inline; 
-  }
-.projects a{
-   
-    text-decoration: none;
-    justify-self: center;
-    padding: 20x;
-    display: inline;
  
-}
-
-
 /* Contatos */
 .contact{
     padding: 30px;
@@ -806,8 +793,28 @@ main .sobre{
     .funfacts .soft_content{
         gap: 70px;
     }
-   
-
+  .project-box{ 
+    max-width: 220px;
+    max-height: 320px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.project-box p{
+    font-size: 12px;
+}
+.project-box img {
+    max-width: 100%;/* Mantém a proporção original da imagem */
+    height: 180px; 
+}
+.project-link{
+    width: fit-content; 
+    font-size: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-top: auto;
+    gap: 0.3px;
+}
 }
 
 
@@ -857,6 +864,27 @@ main .sobre{
         grid-column: 1/-1;
         justify-self: center;
     }
+
+    .project-box {
+        max-width: 190px;
+        max-height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .project-box p{
+        font-size: 12px;
+    }
+    .project-box img {
+        max-width: 100%;/* Mantém a proporção original da imagem */
+        height: 180px; 
+    }
+    .project-link{
+        width: fit-content; 
+        font-size: 10px;
+        text-align: center;
+        justify-content: center;
+        margin-top: auto;
+    }
 }
 
 @media( max-width:800px){
@@ -891,6 +919,35 @@ main .sobre{
     .my_services ul li p {
         font-size: 16px;
         margin-top: -8px;
+    }
+
+    .project-models {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+        gap: 20px;
+        justify-content: center;
+    }
+    .project-box{ 
+        max-width: 220px;
+        max-height: 320px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .project-box p{
+        font-size: 12px;
+    }
+    .project-box img {
+        max-width: 100%;/* Mantém a proporção original da imagem */
+        height: 180px; 
+    }
+    .project-link{
+        width: fit-content; 
+        font-size: 10px;
+        text-align: center;
+        justify-content: center;
+        margin-top: auto;
+        gap: 0.3px;
     }
 }
 
@@ -942,12 +999,55 @@ main .sobre{
     .experience_content div{
         text-align: center;
     }
+
+    
+    
+    .project-models {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 25px; 
+        padding: 0;
+        justify-content: center;
+    }
+    .project-box{ 
+        max-width: 180x;
+        max-height: 310px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .project-box p{
+        font-size: 12px;
+    }
+    .project-box img {
+        max-width: 100%;/* Mantém a proporção original da imagem */
+        height: 180px; 
+    }
+    .project-link{
+        width: fit-content; 
+        font-size: 10px;
+        text-align: center;
+        justify-content: center;
+        margin-top: auto;
+        gap: 0.3px;
+    }
  }
 
  @media(max-width: 414px){
     .sobre_texto p{
         font-size: 18px;
     }
+    .sobre_titulo p{
+        font-size: 16px;
+    }
+
+    .skill_content h3{
+        font-size: 18px;
+    }
+    .soft_content h3{
+        font-size: 18px;
+    }
+
     .my_services {
         padding: 0px;
         color: white;
@@ -963,13 +1063,17 @@ main .sobre{
         width: 100%;
         height: 180px;
         padding: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens ao longo do eixo transversal (vertical) */
         text-align: center;
       }
     
 
     .my_services ul li i {
         font-size: 16px; 
-        margin-bottom: -8px; 
+        margin-bottom: -7px; 
+    
     }
     .my_services ul li h3 {
         font-size: 12px; 
@@ -978,11 +1082,40 @@ main .sobre{
 
     .my_services ul li p {
         font-size: 10px;
-        margin-top: -4px;
+      justify-self: center;
     }
     
     .experience_content div{
         text-align: center;
+    }
+    .project-models {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 25px; 
+        padding: 0;
+        justify-content: center;
+    }
+    .project-box{ 
+        max-width: 160x;
+        max-height: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .project-box p{
+        font-size: 10px;
+    }
+    .project-box img {
+        max-width: 100%;/* Mantém a proporção original da imagem */
+        height: 150px; 
+    }
+    .project-link{
+        width: fit-content; 
+        font-size: 8px;
+        text-align: center;
+        justify-content: center;
+        margin-top: auto;
+        gap: 0.3px;
     }
  }
 
@@ -1028,6 +1161,10 @@ main .sobre{
     }
     .sobre_texto p{
         font-size: 18px;
+    }
+
+    .sobre_titulo p{
+        font-size: 16px;
     }
 
       .my_services {
@@ -1096,6 +1233,36 @@ main .sobre{
         font-size: 16px; 
     } 
     
+    
+    .project-models {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px;  
+        padding: 0;
+        justify-content: center;
+    }
+    .project-box{ 
+        max-width: 160x;
+        max-height: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .project-box p{
+        font-size: 10px;
+    }
+    .project-box img {
+        max-width: 100%;/* Mantém a proporção original da imagem */
+        height: 150px; 
+    }
+    .project-link{
+        width: fit-content; 
+        font-size: 8px;
+        text-align: center;
+        justify-content: center;
+        margin-top: auto;
+        gap: 0.3px;
+    }
 }
 
     /* Adicione uma media query para telas menores (por exemplo, dispositivos com largura máxima de 600px) */
